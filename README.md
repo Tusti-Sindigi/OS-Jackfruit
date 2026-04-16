@@ -92,36 +92,35 @@ make clean
 ## 3. Demo with Screenshots
 
 ### SS1: Multi-container supervision
-![Multi-container](screenshots/ss1.png)  
+![Multi-container](Screenshots/ss1.png)  
 *Two containers (`alpha` and `beta`) running concurrently under a single supervisor process, demonstrating multi-container management.*
 
 ### SS2: Metadata tracking
-![Metadata](screenshots/ss2.png)  
+![Metadata](Screenshots/ss2.png)  
 *Output of `engine ps` showing container metadata including container ID, host PID, state (running/exited), memory limits, and log file paths.*
 
 ### SS3: Bounded-buffer logging
-![Logging_1](screenshots/ss3.png)  
-![Logging_2](screenshots/ss3.png)  
+![Logging_1](Screenshots/ss3.png)  
 *Container output is captured via pipes and processed through a bounded-buffer logging system. Continuous `cpu_hog` output demonstrates correct producer-consumer behavior.*
 
 ### SS4: CLI and IPC
-![CLI](screenshots/ss4.png)  
+![CLI](Screenshots/ss4.png)  
 *A CLI command (`engine stop test`) is issued and the supervisor responds accordingly, demonstrating control-path IPC and correct state updates.*
 
 ### SS5: Soft-limit warning
-![Soft Limit](screenshots/ss5.png)  
+![Soft Limit](Screenshots/ss5.png)  
 *Kernel log (`dmesg`) showing a soft memory limit warning generated when the container exceeds its configured soft limit.*
 
 ### SS6: Hard-limit enforcement
-![Hard Limit](screenshots/ss6.png)  
+![Hard Limit](Screenshots/ss6.png)  
 *Kernel log showing process termination after exceeding the hard limit, along with `engine ps` reflecting the container state as `hard_limit_killed`.*
 
 ### SS7: Scheduling experiment
-![Scheduling](screenshots/ss7.png)  
+![Scheduling](Screenshots/ss7.png)  
 *Comparison between CPU-bound (`cpu_hog`) and IO-bound (`io_pulse`) workloads showing different execution behavior under the Linux scheduler.*
 
 ### SS8: Clean teardown
-![Teardown](screenshots/ss8.png)  
+![Teardown](Screenshots/ss8.png)  
 *All containers are stopped and system process list confirms no zombie processes remain, demonstrating proper cleanup and resource management.*
 
 ---
